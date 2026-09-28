@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Transfer | Invest</title>
+
+  <link
+    rel="stylesheet"
+    href="transfer.css"
+  >
+
+</head>
+
+
+<body>
+
+<main class="page-shell">
+
+
+  <!-- TOP BAR -->
+
+  <section class="topbar">
+
+    <a
+      href="invest-wallet.html"
+      class="back"
+    >
+      ← Back To Wallet
+    </a>
+
+    <div class="brand">
+      INVEST
+    </div>
+
+    <a
+      href="#"
+      class="history"
+    >
+      Transfer History
+    </a>
+
+  </section>
+
+
+  <!-- TRANSFER CARD -->
+
+  <section class="exchange-card">
+
+
+    <div class="card-head">
+
+      <div>
+
+        <span class="eyebrow">
+          Wallet
+        </span>
+
+        <h1>
+          Transfer
+        </h1>
+
+        <p>
+          Send assets to another wallet securely.
+        </p>
+
+      </div>
+
+      <div class="secure">
+        ✓ Secure
+      </div>
+
+    </div>
+
+
+    <!-- BALANCE -->
+
+    <div class="balance">
+
+      <span>
+        Available balance
+      </span>
+
+      <strong id="balance">
+        2,450.00 USDT
+      </strong>
+
+    </div>
+
+
+    <!-- ASSET -->
+
+    <div class="field">
+
+      <label>
+        Asset
+      </label>
+
+
+      <button
+        type="button"
+        class="asset-btn"
+        id="assetBtn"
+      >
+
+        <span class="coin">
+          $
+        </span>
+
+        <span>
+
+          <strong id="assetName">
+            Tether
+          </strong>
+
+          <small id="assetCode">
+            USDT
+          </small>
+
+        </span>
+
+        <span class="chevron">
+          ⌄
+        </span>
+
+      </button>
+
+
+      <div
+        id="assetMenu"
+        class="asset-menu"
+      >
+
+        <button
+          data-name="Tether"
+          data-code="USDT"
+          data-symbol="$"
+        >
+          $
+
+          <span>
+            Tether
+            <small>USDT</small>
+          </span>
+
+        </button>
+
+
+        <button
+          data-name="Bitcoin"
+          data-code="BTC"
+          data-symbol="₿"
+        >
+          ₿
+
+          <span>
+            Bitcoin
+            <small>BTC</small>
+          </span>
+
+        </button>
+
+
+        <button
+          data-name="Ethereum"
+          data-code="ETH"
+          data-symbol="Ξ"
+        >
+          Ξ
+
+          <span>
+            Ethereum
+            <small>ETH</small>
+          </span>
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- RECIPIENT -->
+
+    <div class="field">
+
+      <label>
+        Recipient address
+      </label>
+
+      <div class="input-wrap">
+
+        <input
+          id="recipient"
+          type="text"
+          placeholder="Enter wallet address"
+          required
+        >
+
+        <button
+          type="button"
+          class="paste"
+          id="paste"
+        >
+          Paste
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- NETWORK -->
+
+    <div class="field">
+
+      <label>
+        Network
+      </label>
+
+      <select id="network">
+
+        <option>
+          Tron (TRC20)
+        </option>
+
+        <option>
+          Ethereum (ERC20)
+        </option>
+
+        <option>
+          BNB Smart Chain (BEP20)
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <!-- AMOUNT -->
+
+    <div class="field">
+
+      <div class="amount-head">
+
+        <label>
+          Amount
+        </label>
+
+        <button
+          type="button"
+          id="max"
+        >
+          Max
+        </button>
+
+      </div>
+
+
+      <div class="input-wrap">
+
+        <input
+          id="amount"
+          type="number"
+          min="0"
+          step="any"
+          placeholder="0.00"
+        >
+
+        <span id="amountCode">
+          USDT
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- SUMMARY -->
+
+    <div class="summary">
+
+      <div>
+
+        <span>
+          Network fee
+        </span>
+
+        <b>
+          0.00 USDT
+          <small>Demo</small>
+        </b>
+
+      </div>
+
+
+      <div>
+
+        <span>
+          You receive
+        </span>
+
+        <b id="receive">
+          0.00 USDT
+        </b>
+
+      </div>
+
+    </div>
+
+
+    <!-- WARNING -->
+
+    <div class="warning">
+
+      ⚠ Verify the recipient address and network
+      before confirming. Blockchain transfers can
+      be irreversible.
+
+    </div>
+
+
+    <button
+      id="submit"
+      class="primary"
+    >
+      Continue
+    </button>
+
+
+    <div
+      id="status"
+      class="status"
+    ></div>
+
+
+  </section>
+
+</main>
+
+
+<script src="transfer.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Withdraw | Invest</title>
+
+    <link rel="stylesheet" href="withdraw.css">
+</head>
+
+    <body>
+    <main class="page">
+
+        <a href="invest-wallet.html" class="back">
+           ← Wallet
+       </a>
+
+        <section class="withdraw-card">
+
+            <div class="card-header">
+
+                <div>
+                    <span class="eyebrow">WALLET</span>
+                    <h1>Withdraw</h1>
+                    <p>
+                        Withdraw your crypto to an external wallet.
+                    </p>
+                </div>
+
+                <div class="secure-badge">
+                    🔒 Secure
+                </div>
+
+            </div>
+
+
+            <!-- Asset -->
+
+            <div class="field">
+
+                <label>Asset</label>
+
+                <div class="asset-selector">
+
+                    <button
+                        type="button"
+                        class="asset-button"
+                        id="assetButton">
+
+                        <span class="coin-icon" id="coinIcon">
+                            ₮
+                        </span>
+
+                        <span>
+                            <strong id="assetName">
+                                Tether
+                            </strong>
+
+                            <small id="assetCode">
+                                USDT
+                            </small>
+                        </span>
+
+                        <span class="arrow">
+                            ▾
+                        </span>
+
+                    </button>
+
+
+                    <div
+                        class="asset-menu"
+                        id="assetMenu">
+
+                        <button
+                            type="button"
+                            data-asset="USDT"
+                            data-name="Tether"
+                            data-symbol="₮">
+                            ₮ Tether
+                            <span>USDT</span>
+                        </button>
+
+                        <button
+                            type="button"
+                            data-asset="BTC"
+                            data-name="Bitcoin"
+                            data-symbol="₿">
+                            ₿ Bitcoin
+                            <span>BTC</span>
+                        </button>
+
+                        <button
+                            type="button"
+                            data-asset="ETH"
+                            data-name="Ethereum"
+                            data-symbol="Ξ">
+                            Ξ Ethereum
+                            <span>ETH</span>
+                        </button>
+
+                        <button
+                            type="button"
+                            data-asset="USDC"
+                            data-name="USD Coin"
+                            data-symbol="$">
+                            $ USD Coin
+                            <span>USDC</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Balance -->
+
+            <div class="balance-box">
+
+                <span>Available balance</span>
+
+                <strong>
+                    <span id="balance">2450.00</span>
+                    <span id="balanceAsset">USDT</span>
+                </strong>
+
+            </div>
+
+
+            <!-- Network -->
+
+            <div class="field">
+
+                <label for="network">
+                    Network
+                </label>
+
+                <select id="network">
+
+                    <option value="TRC20">
+                        Tron (TRC20)
+                    </option>
+
+                    <option value="ERC20">
+                        Ethereum (ERC20)
+                    </option>
+
+                    <option value="BEP20">
+                        BNB Smart Chain (BEP20)
+                    </option>
+
+                    <option value="Bitcoin">
+                        Bitcoin
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Address -->
+
+            <div class="field">
+
+                <label for="address">
+                    Withdrawal address
+                </label>
+
+                <div class="input-wrap">
+
+                    <input
+                        type="text"
+                        id="address"
+                        placeholder="Enter recipient wallet address">
+
+                    <button
+                        type="button"
+                        id="pasteButton">
+                        Paste
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Amount -->
+
+            <div class="field">
+
+                <div class="amount-head">
+
+                    <label for="amount">
+                        Amount
+                    </label>
+
+                    <button
+                        type="button"
+                        id="maxButton">
+                        MAX
+                    </button>
+
+                </div>
+
+                <div class="amount-input">
+
+                    <input
+                        type="number"
+                        id="amount"
+                        placeholder="0.00"
+                        min="0"
+                        step="any">
+
+                    <span id="amountAsset">
+                        USDT
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Summary -->
+
+            <div class="summary">
+
+                <div>
+                    <span>Network fee</span>
+
+                    <strong>
+                        <span id="fee">1.00</span>
+                        <span id="feeAsset">USDT</span>
+                    </strong>
+                </div>
+
+
+                <div>
+                    <span>You will receive</span>
+
+                    <strong>
+                        <span id="receive">0.00</span>
+                        <span id="receiveAsset">USDT</span>
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <!-- Warning -->
+
+            <div class="warning">
+
+                <strong>⚠ Important</strong>
+
+                <p>
+                    Make sure the withdrawal address and network
+                    are correct. Crypto withdrawals cannot normally
+                    be reversed once processed.
+                </p>
+
+            </div>
+
+
+            <!-- Form -->
+
+            <form id="withdrawForm">
+
+                <button
+                    type="submit"
+                    class="primary-button">
+
+                    Continue Withdrawal
+
+                </button>
+
+            </form>
+
+
+            <div
+                id="status"
+                class="status">
+            </div>
+
+        </section>
+
+    </main>
+
+
+   <script src="withdraw.js"></script>
+
+</body>
+</html>

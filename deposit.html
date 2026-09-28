@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Deposit | Invest</title>
+
+  <link rel="stylesheet" href="deposit.css">
+</head>
+
+<body>
+
+  <main class="page-shell">
+
+    <!-- TOP BAR -->
+    <section class="topbar">
+
+      <a href="invest-wallet.html" class="back">
+        ← Wallet
+      </a>
+
+      <div class="brand">
+        INVEST
+      </div>
+    </section>
+
+
+    <!-- DEPOSIT CARD -->
+    <section class="exchange-card">
+
+      <div class="card-head">
+
+        <div>
+          <span class="eyebrow">
+            Wallet
+          </span>
+
+          <h1>
+            Deposit
+          </h1>
+
+          <p>
+            Add funds to your account securely.
+          </p>
+        </div>
+
+        <div class="secure">
+          ✓ Secure
+        </div>
+
+      </div>
+
+
+      <!-- ASSET -->
+      <div class="asset-picker">
+
+        <label>
+          Asset
+        </label>
+
+        <button
+          type="button"
+          id="assetBtn"
+          class="asset-btn"
+        >
+
+          <span class="coin btc">
+            ₿
+          </span>
+
+          <span>
+            <strong id="assetName">
+              Bitcoin
+            </strong>
+
+            <small id="assetCode">
+              BTC
+            </small>
+          </span>
+
+          <span class="chevron">
+            ⌄
+          </span>
+
+        </button>
+
+
+        <!-- ASSET DROPDOWN -->
+        <div id="assetMenu" class="asset-menu">
+
+          <button
+            data-name="Bitcoin"
+            data-code="BTC"
+            data-symbol="₿"
+          >
+            ₿
+
+            <span>
+              Bitcoin
+              <small>BTC</small>
+            </span>
+          </button>
+
+
+          <button
+            data-name="Ethereum"
+            data-code="ETH"
+            data-symbol="Ξ"
+          >
+            Ξ
+
+            <span>
+              Ethereum
+              <small>ETH</small>
+            </span>
+          </button>
+
+
+          <button
+            data-name="Litecoin"
+            data-code="LTC"
+            data-symbol="Ł"
+          >
+            Ł
+
+            <span>
+              Litecoin
+              <small>LTC</small>
+            </span>
+          </button>
+
+
+          <button
+            data-name="Dogecoin"
+            data-code="DOGE"
+            data-symbol="Ð"
+          >
+            Ð
+
+            <span>
+              Dogecoin
+              <small>DOGE</small>
+            </span>
+          </button>
+
+
+          <button
+            data-name="Tether"
+            data-code="USDT"
+            data-symbol="$"
+          >
+            $
+
+            <span>
+              Tether
+              <small>USDT</small>
+            </span>
+          </button>
+
+
+          <button
+            data-name="USD Coin"
+            data-code="USDC"
+            data-symbol="$"
+          >
+            $
+
+            <span>
+              USD Coin
+              <small>USDC</small>
+            </span>
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- NETWORK -->
+      <div class="network-row">
+
+        <div>
+
+          <label>
+            Network
+          </label>
+
+          <select id="network">
+
+            <option>
+              Bitcoin
+            </option>
+
+            <option>
+              Ethereum (ERC20)
+            </option>
+
+            <option>
+              Tron (TRC20)
+            </option>
+
+            <option>
+              BNB Smart Chain (BEP20)
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="network-note">
+
+          Only send
+          <b id="networkAsset">BTC</b>
+          on the selected network.
+
+        </div>
+
+      </div>
+
+
+      <!-- DEPOSIT ADDRESS -->
+      <div class="address-box">
+
+        <div class="address-title">
+
+          <span>
+            Deposit address
+          </span>
+
+    
+
+        </div>
+
+
+        <div class="address-line">
+
+          <code id="depositAddress">
+            bc1q7x9m2demo8k3w4n6p0q
+          </code>
+
+          <button
+            type="button"
+            id="copyBtn"
+          >
+            Copy
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- WARNING -->
+      <div class="warning">
+
+        ⚠ Make sure the asset and network match
+        the sending platform. Sending an unsupported
+        asset or network may result in loss of funds.
+
+      </div>
+
+<!-- 
+      <-- AMOUNT 
+      <form id="depositForm">
+
+        <div class="field">
+
+          <label>
+            Amount
+          </label>
+
+          <div class="input-wrap">
+
+            <input
+              id="amount"
+              type="number"
+              min="0"
+              step="any"
+              placeholder="0.00"
+              required
+            >
+
+            <span id="amountCode">
+              BTC
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <button
+          class="primary"
+          type="submit"
+        >
+          Confirm Deposit
+        </button>
+
+      </form>
+
+
+      <div
+        id="status"
+        class="status"
+      ></div> -->
+
+    </section>
+
+  </main>
+
+
+  <script src="deposit.js"></script>
+
+</body>
+</html>
